@@ -6,7 +6,6 @@
         let imgUrl = event.target.currentSrc.split('/');
         let tag = document.createElement('img');
         tag.src = 'image/large/' + imgUrl[imgUrl.length - 1];
-        tag.id = 'anim';
 
         document.getElementById('modal').appendChild(tag);
         document.getElementById('modal').style.zIndex = '20';
