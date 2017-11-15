@@ -1,0 +1,52 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  font-size: 0;
+  margin: 0;
+
+}
+
+#gallery {
+   div {
+     img {
+       &:hover {
+         border-color: orange;
+         transform: scale(1.05);
+       }
+       border: 2px solid white;
+       transition: all .1s;
+       box-shadow: 0 0 10px black;
+     }
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+     grid-gap: 10px;
+
+  }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #999;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+#modal {
+    img {
+      border: 2px solid white;
+      box-shadow: 0 0 10px black;
+      height: 550px;
+    }
+
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index: -10;
+  transition: opacity 1s;
+  background: RGBA(0, 0, 0, 0.9);
+}

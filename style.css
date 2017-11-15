@@ -1,0 +1,48 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 0;
+  margin: 0;
+}
+#gallery {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #999;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+#gallery div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+#gallery div img {
+  border: 2px solid white;
+  transition: all .1s;
+  box-shadow: 0 0 10px black;
+}
+#gallery div img:hover {
+  border-color: orange;
+  transform: scale(1.05);
+}
+#modal {
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index: -10;
+  transition: opacity 1s;
+  background: rgba(0, 0, 0, 0.9);
+}
+#modal img {
+  border: 2px solid white;
+  box-shadow: 0 0 10px black;
+  height: 550px;
+}
